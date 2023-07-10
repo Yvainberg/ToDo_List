@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+   frontend:
+      build:
+      ports:
+      - 3000:3000
+   backend:
+     build:
+     ports:
+     - 3001:3001
+     environment:
+     - DB_url=
+   database:
+     images:
+     ports:
+     - 8080:8080
+     volumes:
